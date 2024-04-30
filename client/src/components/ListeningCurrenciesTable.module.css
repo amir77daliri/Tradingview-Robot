@@ -1,0 +1,49 @@
+.ktCaret {
+    align-items: center;
+    display: flex;
+    height: 1.5rem;
+    justify-content: center;
+    width: 1.5rem;
+}
+
+
+.ktCaretHandle {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    width: 50%;
+}
+
+.ktCaretLeftHandle {
+    flex-direction: row-reverse;
+}
+
+
+
+.ktCaretHandle::before {
+    background-color: rgba(0, 0, 0, .32);
+    border-radius: 1px;
+    content: "";
+    height: 2px;
+    transition: transform .32s cubic-bezier(.4,0,.2,1) 0ms;
+    width: .5rem;
+}
+
+.ktCaretLeftHandle::before {
+    transform: translateX(-2px) rotate(-45deg);
+}
+
+.ktCaretExpanded
+.ktCaretLeftHandle::before {
+    transform: translateX(-2px) rotate(45deg);
+}
+
+.ktCaretRigthHandle::before {
+    transform: translateX(2px) rotate(45deg);
+}
+
+.ktCaretExpanded
+.ktCaretRigthHandle::before {
+    transform: translateX(2px) rotate(-45deg);
+}

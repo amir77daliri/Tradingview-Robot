@@ -1,0 +1,19 @@
+# Ignore Node.js specific files and folders
+node_modules
+node_modules/
+/node_modules
+npm-debug.log
+
+# Ignore build artifacts and logs
+build
+dist
+logs
+*.log
+*.log*
+*.log?
+# Ignore local development files
+*.env
+.env.local
+
+# Ignore any backup files
+*.bak
